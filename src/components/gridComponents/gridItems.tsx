@@ -16,7 +16,10 @@ import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-mod
 import { loadMeetingsData } from "@/api";
 import Image from "next/image";
 import FilterArea from "./FilterArea";
-ModuleRegistry.registerModules([ClientSideRowModelModule]);
+
+import { CsvExportModule } from "@ag-grid-community/csv-export";
+
+ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
 
 // Custom Cell Renderer (Display logos based on cell value)
 
@@ -242,6 +245,25 @@ const GridItems = () => {
     setNoOfSelectedRows(glength);
   };
 
+  const onBtnExport = useCallback(() => {
+    console.log("fgghfgh");
+    const sel = gridRef.current?.api.getSelectedRows();
+
+    console.log("hereere::", sel);
+
+    gridRef.current?.api.exportDataAsCsv();
+  }, []);
+
+  const onBtnUpdate = useCallback(() => {
+    console.log("qqqqq");
+    const sel = gridRef.current?.api.getSelectedRows();
+
+    console.log("hereere::", sel);
+
+    (document.querySelector("#csvResult") as any).value =
+      gridRef.current!.api.getDataAsCsv();
+  }, []);
+
   //   // Apply settings across all columns
   //   const defaultColDef = useMemo(() => ({
   //     filter: true,
@@ -306,7 +328,11 @@ const GridItems = () => {
             />
             <p style={{ paddingTop: "2px" }}>Meeting</p>
           </div>
-          <div className="flex w-20 h-6 items-center rounded-xl px-1 border ml-1">
+          <div
+            className="flex w-20 h-6 items-center rounded-xl px-1 border ml-1"
+            onClick={onBtnExport}
+            style={{ cursor: "pointer" }}
+          >
             <Image
               src="/export.svg"
               alt="down"

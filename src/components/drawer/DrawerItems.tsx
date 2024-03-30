@@ -1,6 +1,7 @@
 import { loadFolders, loadTeams } from "@/api";
 import { activeFolder, folderProps, teamProps } from "@/types/loadtype";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const DrawerItems = () => {
@@ -32,19 +33,21 @@ const DrawerItems = () => {
               key={indx}
               className="flex justify-between items-center text-sm items-center pb-1 border-b-2"
             >
-              <div className="flex gap-2 text-sm ">
-                <Image
-                  src={sngl.icon}
-                  alt="disscuss"
-                  width={500}
-                  height={500}
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                  }}
-                />
-                <p className="text-xs">{sngl.name}</p>
-              </div>
+              <Link href={`${sngl.link}`}>
+                <div className="flex gap-2 text-sm ">
+                  <Image
+                    src={sngl.icon}
+                    alt="disscuss"
+                    width={500}
+                    height={500}
+                    style={{
+                      width: "16px",
+                      height: "16px",
+                    }}
+                  />
+                  <p className="text-xs">{sngl.name}</p>
+                </div>
+              </Link>
               <button className="text-xs border px-1 rounded border-slate-900 ">
                 {sngl.about}
               </button>
@@ -61,9 +64,12 @@ const DrawerItems = () => {
             style={{
               width: "20px",
               height: "20px",
+              cursor: "pointer",
             }}
           />
-          <p>Create a team</p>
+          <Link href={"/createTeam"}>
+            <p>Create a team</p>
+          </Link>
         </div>
       </nav>
 
@@ -143,7 +149,9 @@ const DrawerItems = () => {
                         }}
                         key={i}
                       >
-                        <p>{evSub.name}</p>
+                        <Link href={`${evSub.link}`}>
+                          <p>{evSub.name}</p>
+                        </Link>
                       </div>
                     );
                   })}
@@ -162,7 +170,9 @@ const DrawerItems = () => {
                         height: "17px",
                       }}
                     />
-                    <p>Add New Sub</p>
+                    <Link href={"/createSub"}>
+                      <p>Add New Sub</p>
+                    </Link>
                   </div>
                 </div>
               )}
