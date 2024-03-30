@@ -18,8 +18,9 @@ const Modal = (props: { closeModal: any; fordesktop: Boolean }) => {
       }}
     >
       <div
+        className="flex h-full flex-col justify-between"
         style={{
-          position: "relative",
+          minHeight: "700px",
         }}
       >
         {/* <button
@@ -47,13 +48,7 @@ const Modal = (props: { closeModal: any; fordesktop: Boolean }) => {
           />
         </button> */}
 
-        <div
-          style={{
-            position: "sticky",
-            top: 20,
-            left: 0,
-          }}
-        >
+        <div>
           {/* <h2 onClick={props.closeModal}>Close Modal</h2> */}
 
           <div className="flex justify-between items-center py-2 border-b">
@@ -99,11 +94,7 @@ const Modal = (props: { closeModal: any; fordesktop: Boolean }) => {
         <div
           className="bg-slate-50"
           style={{
-            position: "sticky",
-            bottom: "0px",
-            marginTop: "30px",
-            paddingTop: "10px",
-            paddingBottom: "3px",
+            marginTop: "80px",
           }}
         >
           <FooterDrawer />
