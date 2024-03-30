@@ -3,8 +3,8 @@ import React from "react";
 
 const FilterArea = () => {
   return (
-    <div className="flex">
-      <div className="flex w-12 h-6 items-center rounded-xl px-1 border mr-2">
+    <div className="flex w-full justify-between">
+      <div className="flex w-16 h-6 items-center rounded-xl px-1 border mr-2">
         <p style={{ paddingTop: "2px" }}>Desk</p>
         <Image
           src="/downsvgrepo.svg"

@@ -16,12 +16,16 @@ const DisscussionMain = () => {
             position: "sticky",
             top: 0,
             zIndex: 99,
+            marginBottom: "12px",
           }}
         >
           {/* {pagetitle.toUpperCase()} */}
           {pagetitle}
         </h2>
-        <div style={{ fontSize: "10px" }} className="flex items-center">
+        <div
+          style={{ fontSize: "10px" }}
+          className="flex items-center justify-between"
+        >
           <div className="flex  w-48 h-6 items-center rounded-xl px-2 border mr-2">
             <Image
               src="/search.svg"
@@ -38,31 +42,33 @@ const DisscussionMain = () => {
             {/* <p style={{ paddingTop: "2px" }}>All brands</p> */}
             <input type="text" placeholder="Search for..." />
           </div>
-          <div>
-            <Image
-              src="/chat-conversation.svg"
-              alt="down"
-              width={500}
-              height={500}
-              style={{
-                width: "18px",
-                height: "18px",
-                marginLeft: "8px",
-              }}
-            />
-          </div>
-          <div className="hover:bg-zinc-200 ml-2 items-center">
-            <Image
-              src="/settings.svg"
-              alt="down"
-              width={500}
-              height={500}
-              style={{
-                width: "18px",
-                height: "18px",
-                marginLeft: "8px",
-              }}
-            />
+          <div className="flex">
+            <div>
+              <Image
+                src="/chat-conversation.svg"
+                alt="down"
+                width={500}
+                height={500}
+                style={{
+                  width: "18px",
+                  height: "18px",
+                  marginLeft: "8px",
+                }}
+              />
+            </div>
+            <div className="hover:bg-zinc-200 ml-2 items-center">
+              <Image
+                src="/settings.svg"
+                alt="down"
+                width={500}
+                height={500}
+                style={{
+                  width: "18px",
+                  height: "18px",
+                  marginLeft: "8px",
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
