@@ -1,6 +1,6 @@
 import MainPage from "@/components/disscussion";
 
-export default function Home() {
+const DisscussionPage = async () => {
   return (
     <div
       style={{
@@ -11,4 +11,6 @@ export default function Home() {
       <MainPage />
     </div>
   );
-}
+};
+
+export default DisscussionPage;
