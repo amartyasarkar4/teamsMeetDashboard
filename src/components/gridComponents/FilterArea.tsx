@@ -5,32 +5,40 @@ const FilterArea = () => {
   return (
     <div className="flex w-full justify-between">
       <div className="flex w-16 h-6 items-center rounded-xl px-1 border mr-2">
-        <p style={{ paddingTop: "2px" }}>Desk</p>
-        <Image
-          src="/downsvgrepo.svg"
-          alt="down"
-          width={500}
-          height={500}
-          style={{
-            width: "14px",
-            height: "14px",
-            marginLeft: "4px",
-          }}
-        />
+        <div className="w-2/3">
+          <p style={{ paddingTop: "2px", paddingLeft: "4px" }}>Desk</p>
+        </div>
+        <div className="w-1/3">
+          <Image
+            src="/downsvgrepo.svg"
+            alt="down"
+            width={500}
+            height={500}
+            style={{
+              width: "14px",
+              height: "14px",
+              marginLeft: "4px",
+            }}
+          />
+        </div>
       </div>
       <div className="flex w-16 h-6 items-center rounded-xl px-1 border mr-2">
-        <p style={{ paddingTop: "2px" }}>Tags</p>
-        <Image
-          src="/downsvgrepo.svg"
-          alt="down"
-          width={500}
-          height={500}
-          style={{
-            width: "14px",
-            height: "14px",
-            marginLeft: "4px",
-          }}
-        />
+        <div className="w-2/3">
+          <p style={{ paddingTop: "2px", paddingLeft: "4px" }}>Tags</p>
+        </div>
+        <div className="w-1/3">
+          <Image
+            src="/downsvgrepo.svg"
+            alt="down"
+            width={500}
+            height={500}
+            style={{
+              width: "14px",
+              height: "14px",
+              marginLeft: "4px",
+            }}
+          />
+        </div>
       </div>
       <div className="flex w-16 h-6 items-center rounded-xl px-1 border mr-2 text-zinc-500">
         <Image

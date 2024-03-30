@@ -24,7 +24,7 @@ const DisscussionMain = () => {
         </h2>
         <div
           style={{ fontSize: "10px" }}
-          className="flex items-center justify-between"
+          className="flex items-center justify-between px-2"
         >
           <div className="flex  w-48 h-6 items-center rounded-xl px-2 border mr-2">
             <Image
